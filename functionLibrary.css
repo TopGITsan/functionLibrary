@@ -10,10 +10,11 @@ main {
 }
 form {
   margin-top: 40vh;
+  border: 1px dotted maroon;
 }
 
-
 input {
+  width: 50px;
   font-size: 2em;
   margin: 5px 1px 0;
   }

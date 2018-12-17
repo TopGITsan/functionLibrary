@@ -11,7 +11,7 @@ function squared(num){
 }
 
 function cubed(num){
-    let numCube= Math.pow(num,3);
+    let numCube= parseFloat(Math.pow(num,3));
     functionResults.set("is cubed", numCube);
     return numCube;
 }
@@ -22,18 +22,18 @@ function factorial(num){
         num*= x-1;
         x--;
     }
-    functionResults.set("is factorial", num);
+    functionResults.set("is factorial", parseFloat(num));
     return num;
 }
 
 function squareRoot(num){
-    let numSqrt = Math.sqrt(num); 
+    let numSqrt = parseFloat(Math.sqrt(num)).toFixed(4); 
     functionResults.set("is square root", numSqrt);
     return numSqrt;
 }
 
 function cubicRoot(num){
-    let cubedRoot = Math.cbrt(num);
+    let cubedRoot = parseFloat(Math.cbrt(num)).toFixed(4);
     functionResults.set("is cubic root", cubedRoot)
     return cubedRoot;
 }
@@ -60,9 +60,8 @@ input.onchange = ()=>{
     if (isNaN(num) ) {
         para.textContent = 'Please enter a number!';
     } else {
-        // para.textContent = num + ' is squared ' + squared(num)+ '; '+ num + ' is cubed ' + cubed(num)+ '\t' + num + ' is factorial '+ factorial(num);
         start(num);
-        console.log(functionResults);
+        //console.log(functionResults);
         for (let [key, value] of functionResults) {
             document.body.onload = addPara(num, key, value);
         }

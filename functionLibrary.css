@@ -1,0 +1,23 @@
+body {
+  color:#d3d3d3;
+  background-color: black;
+}
+
+main {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+form {
+  margin-top: 40vh;
+}
+
+
+input {
+  font-size: 2em;
+  margin: 5px 1px 0;
+  }
+
+label,p {
+  font-size: 2em;
+}
